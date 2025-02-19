@@ -1,0 +1,48 @@
+<div class="container p-2">
+  <div class="row">
+
+    @for (item of DetailsList; track $index) {
+      <header>
+        <h2>{{item.strMeal}}</h2>
+      </header>
+      <div class="row d-flex">
+        <div class="col-md-4 p-2">
+          <div class="parent">
+            <div class="image rounded-4 mb-3">
+              <img [src]="item.strMealThumb" alt="sushi image" class="w-100 rounded-4">
+            </div>
+            <div class="text-center">
+              <a title="YouTube button" [href]="item.strYoutube" class="btn btn-1 rounded-3 mb-2">
+                <i class="fa fa-brands fa-youtube"></i> YouTube
+              </a>
+              <a title="Source button" [href]="item.strSource" class="btn btn-2 ms-2 rounded-3 mb-2">
+                <i class="fa-solid fa-globe"></i> Source
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 p-2">
+          <p>
+            {{item.strInstructions}}
+          </p>
+        </div>
+        <div class="col-md-4 p-2">
+          <div class="ingredients-card">
+            <h3>Ingredients</h3>
+            <hr />
+            <ul>
+              <li><span>Sushi Rice:</span> <span>{{item.strMeasure1}}</span></li>
+              <li><span>Rice wine:</span> <span>{{item.strMeasure2}}</span></li>
+              <li><span>Caster Sugar:</span> <span>{{item.strMeasure3}}</span></li>
+              <li><span>Mayonnaise:</span> <span>{{item.strMeasure4}}</span></li>
+              <li><span>Rice wine:</span> <span>{{item.strMeasure5}}</span></li>
+              <li><span>Soy Sauce:</span> <span>{{item.strMeasure6}}</span></li>
+              <li><span>Cucumber:</span> <span>{{item.strMeasure7}}</span></li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    }
+  </div>
+</div>

@@ -1,0 +1,91 @@
+@font-face {
+  font-family: 'Pacifico';
+  src: url('/assets/Pacifico/Pacifico-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'ComicNeue';
+  src: url('/assets/Comic_Neue/ComicNeue-BoldItalic.ttf') format('truetype');
+  font-weight: bolder;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ComingSoon';
+  src: url('/assets/Coming_Soon/ComingSoon-Regular.ttf') format('truetype');
+  font-weight: bolder;
+  font-style: normal;
+}
+
+
+h2
+{
+  font-family: 'pacifico';
+  font-weight: bolder;
+  font-size: 2.5rem;
+}
+
+.btn-2
+{
+  background-color: #059669;
+  color: #fff;
+}
+
+.btn-1{
+  background-color: rgb(220 38 38);
+  color: #fff;
+}
+
+p{
+  font-family: 'ComingSoon';
+  font-weight: bold;
+}
+
+
+:host {
+  display: block;
+  padding: 20px;
+  background-color: #f8f5f0;
+  min-height: 100vh;
+}
+
+.ingredients-card {
+  width: 300px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  margin: auto;
+
+  h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    font-family: 'ComicNeue';
+    font-weight: bolder;
+  }
+
+  hr {
+    border: none;
+    height: 3px;
+    background-color: #c2bfbf;
+    margin: 10px 0;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 8px;
+      font-size: 16px;
+
+      span:first-child {
+        font-weight: bold;
+      }
+    }
+  }
+}

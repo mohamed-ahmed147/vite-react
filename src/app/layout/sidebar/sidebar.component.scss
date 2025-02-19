@@ -1,0 +1,106 @@
+#bdSidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 100vh;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 1050;
+
+
+  .sidebar-header {
+    img {
+      max-width: 240px;
+    }
+  }
+}
+
+@font-face {
+  font-family: 'ComicNeue';
+  src: url('/assets/Comic_Neue/ComicNeue-BoldItalic.ttf') format('truetype');
+  font-weight: bolder;
+  font-style: normal;
+}
+
+.mynav {
+  li {
+    a {
+      cursor: pointer;
+      transition: all .3s;
+      color: #000;
+      text-decoration: none;
+      padding: 10px 15px;
+      display: flex;
+      align-items: center;
+      background-color: #fff;
+      font-family: 'ComicNeue';
+      -webkit-transition: all .3s;
+      -moz-transition: all .3s;
+      -ms-transition: all .3s;
+      -o-transition: all .3s;
+      &:hover {
+        background-color: #f0f0f0;
+      }
+
+      -webkit-transition: all 1s;
+      -moz-transition: all 1s;
+      -ms-transition: all 1s;
+      -o-transition: all 1s;
+
+      &.active {
+        background-color: #f29724;
+        color: #fff;
+        box-shadow: 0 10px 15px -3px #f29724, 0 4px 6px -4px #f29724;
+
+        &:hover {
+          -webkit-transform: scale(1.05);
+          -moz-transform: scale(1.05);
+          -ms-transform: scale(1.05);
+          -o-transform: scale(1.05);
+          transform: scale(1.05);
+          box-shadow: none;
+        }
+      }
+
+      i {
+        margin-right: 10px;
+      }
+    }
+  }
+}
+
+
+.d-flex {
+  span {
+    h6 {
+      font-size: 16px;
+      font-weight: 600;
+    }
+  }
+}
+
+
+@media (max-width: 768px) {
+  #bdSidebar {
+    transform: translateX(-100%);
+
+    &.show {
+      transform: translateX(0);
+    }
+  }
+
+  .notification-badge {
+    background-color: rgba(0, 0, 0);
+    float: right;
+    color: #000;
+    font-size: 14px;
+    padding: 0px 8px;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+}
+}

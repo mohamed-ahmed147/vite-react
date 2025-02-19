@@ -1,0 +1,23 @@
+
+<app-header></app-header>
+<div class="container mt-5 p-3 pt-5">
+<div class="row d-flex justify-content-start g-3">
+  @for (item of MealsList; track $index) {
+    <div class="col-xl-3 col-lg-4 col-md-6 mt-5 mb-5">
+      <div class="parent position-relative rounded-5 ">
+        <div class="image m-auto">
+          <img [src]="item.strMealThumb" alt="meal image" class="w-100 rounded-circle">
+        </div>
+        <div class="text-center parent-text">
+          <h3 class="fw-bolder">{{item.strMeal}}</h3>
+          <p class="fw-medium">
+            <i class="fa-solid fa-earth-americas"></i>   {{item.strArea}}</p>
+          <button title="btn for recip" [routerLink]="['/details' , item.idMeal]"  class="btn rounded-5 btn-success-green text-light px-5 py-2 fw-bolder">
+            View Recip
+          </button>
+        </div>
+      </div>
+    </div>
+  }
+</div>
+</div>

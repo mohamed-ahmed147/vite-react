@@ -1,0 +1,64 @@
+@font-face {
+  font-family: 'Pacifico';
+  src: url('/assets/Pacifico/Pacifico-Regular.ttf');
+}
+
+
+
+.parent_header {
+  padding: 20px;
+  h2 {
+    font-family: 'Pacifico', cursive;
+    font-size: 2rem;
+    font-weight: 900;
+    background: linear-gradient(to right, #ffa726, #f57c00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+.parent_header2 {
+  a {
+    cursor: pointer;
+    border: solid black;
+    font-style: italic;
+    font-weight: 500;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+
+    &:hover {
+      box-shadow: 0px 10px 15px 9px rgba(0, 0, 0, 0.1);
+    }
+
+    &.active {
+
+      color: #fff !important;
+      background-color: #000;
+      border-color: #000;
+    }
+  }
+}
+
+
+@media (min-width: 768px) {
+  .parent_header3{
+    display: none !important;
+  }
+  .parent_header2 {
+    display: inline;
+  }
+ }
+
+ @media (max-width: 768px) {
+  .parent_header2{
+    display: none !important;
+  }
+  .parent_header3 {
+    display: block;
+  }
+  .parent_header{
+    text-align: center;
+  }
+  }

@@ -1,0 +1,29 @@
+<!-- header -->
+<div class="parent_header mt-4">
+  <h2>
+      Learn, Cook, Eat Your Food
+  </h2>
+</div>
+
+
+<div class="parent_header2 d-flex flex-wrap ">
+<a [routerLink]="['/home', '']" routerLinkActive="active"  class="rounded-pill  m-2 border-2 py-2 px-4 text-decoration-none text-black d-inline" #allLink="routerLinkActive">All</a>
+@for (item of CategoriesList; track $index) {
+  <a [routerLink]="['/home',item.strCategory]" routerLinkActive="active"  class="rounded-pill  m-2 border-2 py-2 px-4 text-decoration-none text-black d-inline">{{item.strCategory}}</a>
+}
+</div>
+
+<div class="parent_header3">
+  <div class="dropdown">
+    <button class="btn dropdown-toggle w-100 bg-white text-black" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+      Select Category
+    </button>
+    <ul class="dropdown-menu w-100 text-center">
+      <li><a class="dropdown-item" [routerLink]="['/home', '']" >All</a></li>
+      @for (item of CategoriesList; track $index) {
+        <li><a class="dropdown-item" [routerLink]="['/home', item.strCategory]">{{ item.strCategory }}</a></li>
+      }
+    </ul>
+  </div>
+
+</div>
